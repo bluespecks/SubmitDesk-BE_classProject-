@@ -1,0 +1,89 @@
+.animated-btn {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 8px; /* Slightly more rounded */
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.animated-btn.noselect {
+    user-select: none;
+}
+
+/* Danger Variant (Default) */
+.anim-btn-danger {
+    background: #e62222;
+}
+.anim-btn-danger .icon {
+    border-left: 1px solid #c41b1b;
+}
+.anim-btn-danger:hover {
+    background: #ff3636;
+}
+
+/* Primary Variant */
+.anim-btn-primary {
+    background: var(--accent-primary);
+}
+.anim-btn-primary .icon {
+    border-left: 1px solid var(--accent-hover);
+}
+.anim-btn-primary:hover {
+    background: var(--accent-hover);
+}
+
+/* Base Transitions */
+.animated-btn, .animated-btn span {
+    transition: 200ms;
+}
+
+.animated-btn .text {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 40px);
+    height: 100%;
+}
+
+.animated-btn .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #eee;
+}
+
+.animated-btn svg {
+    /* Optional scaling for svg */
+}
+
+/* Hover Effects */
+.animated-btn:hover .text {
+    color: transparent;
+}
+
+.animated-btn:hover .icon {
+    width: 100%;
+    border-left: none;
+}
+
+.animated-btn:focus {
+    outline: none;
+}
+
+.animated-btn:active .icon svg {
+    transform: scale(0.8);
+}

@@ -1,0 +1,32 @@
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;
+    /* Width of sidebar */
+    min-width: 0;
+    /* Prevents flex items from overflowing */
+    transition: margin-left 0.3s ease;
+}
+
+.page-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    height: calc(100vh - 64px);
+    /* Subtract Topbar height */
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+    }
+
+    /* Mobile sidebar handling would go here next */
+}

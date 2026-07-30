@@ -1,0 +1,96 @@
+.upload-box {
+    border: 2px dashed var(--border-color);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: var(--bg-tertiary);
+    min-height: 200px;
+}
+
+.upload-box:hover {
+    border-color: var(--accent-primary);
+    background-color: rgba(59, 130, 246, 0.05);
+    /* Blue tint */
+}
+
+.upload-icon {
+    color: var(--text-tertiary);
+}
+
+.upload-text {
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.upload-separator {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin: 0.5rem 0;
+}
+
+.upload-box button {
+    margin-top: 0.5rem;
+}
+
+.file-preview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.file-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-tertiary);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-primary);
+}
+
+.file-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.file-name {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.file-size {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.remove-file-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.remove-file-btn:hover {
+    background-color: var(--bg-tertiary);
+    color: var(--color-danger);
+}

@@ -1,0 +1,82 @@
+.form-control {
+  position: relative;
+  margin: 10px 0 20px;
+  width: 100%;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px var(--border-color) solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0 5px 0;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: var(--accent-primary);
+}
+
+.form-control input::placeholder {
+  color: transparent;
+}
+
+.form-control input:focus::placeholder {
+  color: var(--text-tertiary);
+}
+
+.form-control label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  pointer-events: none;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 1rem;
+  min-width: 5px;
+  color: var(--text-secondary);
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+  color: var(--accent-primary);
+  transform: translateY(-25px);
+  font-size: 0.85rem;
+}
+
+/* Fix for date/time inputs - prevent label overlap */
+.form-control input[type="date"]:not(:focus):invalid+label span,
+.form-control input[type="time"]:not(:focus):invalid+label span,
+.form-control input[type="datetime-local"]:not(:focus):invalid+label span {
+  transform: translateY(0);
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+/* Only float label when date input has focus or actual value */
+.form-control input[type="date"]:focus+label span,
+.form-control input[type="time"]:focus+label span,
+.form-control input[type="datetime-local"]:focus+label span,
+.form-control input[type="date"]:not(:placeholder-shown)+label span,
+.form-control input[type="time"]:not(:placeholder-shown)+label span,
+.form-control input[type="datetime-local"]:not(:placeholder-shown)+label span {
+  color: var(--accent-primary);
+  transform: translateY(-25px);
+  font-size: 0.85rem;
+}
+
+.form-control input.input-error {
+  border-bottom-color: var(--color-danger);
+}
+
+.form-control input.input-error:focus+label span,
+.form-control input.input-error:valid+label span {
+  color: var(--color-danger);
+}

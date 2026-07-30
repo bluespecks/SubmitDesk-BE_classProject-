@@ -1,0 +1,177 @@
+.submissions-page {
+    height: calc(100vh - 100px);
+    /* Adjust for topbar/padding */
+    display: flex;
+    flex-direction: column;
+}
+
+.submissions-header {
+    margin-bottom: 1.5rem;
+}
+
+.submissions-header h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+/* Layouts */
+.submissions-layout {
+    display: flex;
+    gap: 1.5rem;
+    height: 100%;
+    overflow: hidden;
+}
+
+.assignments-list-sidebar {
+    width: 300px;
+    background-color: var(--bg-secondary);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.list-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 600;
+    background-color: var(--bg-tertiary);
+}
+
+.list-content {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.list-item {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.list-item:hover {
+    background-color: var(--bg-tertiary);
+}
+
+.list-item.active {
+    background-color: rgba(37, 99, 235, 0.05);
+    border-left: 3px solid var(--accent-primary);
+}
+
+.list-item-title {
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.list-item-meta {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+/* Main Content Area */
+.submissions-main {
+    flex: 1;
+    background-color: var(--bg-secondary);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.main-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Student List Grid */
+.students-grid {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    overflow-y: auto;
+}
+
+.student-card {
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: var(--bg-primary);
+}
+
+.student-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+    border-color: var(--accent-primary);
+}
+
+/* Grading View */
+.grading-view {
+    display: flex;
+    height: 100%;
+}
+
+.submission-content {
+    flex: 2;
+    padding: 1.5rem;
+    border-right: 1px solid var(--border-color);
+    overflow-y: auto;
+    background-color: var(--bg-tertiary);
+}
+
+.grading-panel {
+    flex: 1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow-y: auto;
+    background-color: var(--bg-secondary);
+}
+
+.content-preview {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-sm);
+    min-height: 400px;
+}
+
+.file-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    color: var(--accent-primary);
+}
+
+.file-link:hover {
+    background-color: var(--bg-primary);
+}

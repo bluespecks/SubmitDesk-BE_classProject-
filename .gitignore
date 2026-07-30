@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment files
+.env
+.env.*
+
+# IDE settings
+.vscode/
+
+# Claude
+.claude/
+
+# Documentation
+docs/
+
+# Credentials
+credentials.txt
+
+# Logs
+*.log
